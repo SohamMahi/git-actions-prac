@@ -1,0 +1,29 @@
+name: CICD
+
+on: 
+  workflow_dispatch:
+
+# Jobs
+# Should be inside workflows
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the Code
+        run: echo "Cloning the Code from Source"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build using Docker
+        run: echo "Building using Dcoker"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing the Build
+        run: echo "Testing the App"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying the App
+        run: echo "Application Deployed"
